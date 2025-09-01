@@ -67,7 +67,7 @@ router.delete('/:id', (req, res) => {
   }
 
   const usuarioDeletado = usuarios.splice(usuarioIndex, 1);
-  res.status(200).json({ mensagem: `Usuário '${usuarioDeletado[0].nome}' deletado com sucesso` });
+  res.status(200).json({ mensagem: `Usuário deletado com sucesso` });
 });
 
 module.exports = router;
