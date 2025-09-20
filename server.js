@@ -1,9 +1,14 @@
 const express = require('express');
+const cors = require('cors'); // 👈 importa o cors
 const app = express();
 const port = 3000; 
 
 const produtosRoutes = require('./routes/produtos');
 const usuariosRoutes = require('./routes/usuarios');
+
+app.use(cors({
+  origin: "http://localhost:5173" 
+}));
 
 app.use(express.json());
 
